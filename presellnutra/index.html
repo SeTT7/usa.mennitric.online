@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Confirmation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            padding: 20px;
+        }
+
+        .confirmation-container {
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .confirmation-title {
+            color: #cc0000;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .confirmation-text {
+            color: #000;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .watch-button {
+            background-color: #e65c00;
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .watch-button:hover {
+            background-color: #cc5200;
+        }
+    </style>
+    
+    
+    <style>
+        /* Container centralizado e responsivo */
+        .midas-cta-container {
+            max-width: 100%; /* Largura máxima do container */
+            margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+            text-align: center; /* Centraliza o texto e elementos */
+            padding: 20px; /* Espaçamento interno */
+        }
+
+        /* Botão estilizado - Agora em verde */
+        #midas-cta-button {
+            display: inline-block;
+            margin-top: 15px; /* Espaço entre a imagem e o botão */
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #e65c00; /* Cor laranja */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* Remove o sublinhado caso seja um link */
+            font-weight: bold;
+        }
+        
+        /* Botão responsivo ao passar o mouse */
+        #midas-cta-button:hover {
+            background-color: #e65c00; /* Cor verde mais escura ao passar o mouse */
+        }
+    </style>
+    
+    
+    
+    <script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+    
+    
+     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          function getAllParams(url) {
+              const urlObj = new URL(url);
+              let paramString = "";
+
+              // Iterando sobre todos os parâmetros da URL
+              for (const [key, value] of urlObj.searchParams) {
+                  paramString += `${paramString ? '&' : ''}${key}=${value}`;
+              }
+
+              return paramString;
+          }
+
+          const params = getAllParams(window.location.href);
+
+          if (params) {
+              const links = document.querySelectorAll("a");
+
+              links.forEach(link => {
+                  const separator = link.href.includes("?") ? "&" : "?";
+                  link.href += `${separator}${params}`;
+              });
+          }
+      });
+    </script>
+    
+    
+</head>
+<body>
+    
+    
+    <div class="confirmation-container">
+        <h1 class="confirmation-title">We Need Confirmation:</h1>
+        <p class="confirmation-text">Click Watch Now If You Have +40!</p>
+        <div class="midas-cta-container"> 
+<a href="https://seusiteaqui.com" id="midas-cta-button" class="midas-cta">
+            WATCH NOW
+        </a>
+    </div>
+        
+    </div>
+</body>
+</html>
